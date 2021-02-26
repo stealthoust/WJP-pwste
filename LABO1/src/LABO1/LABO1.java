@@ -46,6 +46,7 @@ public class LABO1 {
         while(!goodData){
             try {
                 System.out.print(text);
+                
                 data = Integer.parseInt(in.readLine());
                 goodData = true;
             }
@@ -83,6 +84,7 @@ public class LABO1 {
     }
 
     public static void main(String[] args) throws IOException {
+        
         
         //Factorial
         System.out.println("Let's calc factorial!");
