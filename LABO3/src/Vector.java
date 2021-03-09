@@ -48,15 +48,15 @@ public class Vector {
   }
 
   private void sum(Vector A, Vector B) {
-    this.x += B.x;
-    this.y += B.y;
-    this.z += B.z;
+    this.x = A.x + B.x;
+    this.y = A.y + B.y;
+    this.z = A.z + B.z;
   }
 
   private void sub(Vector A, Vector B) {
-    this.x -= B.x;
-    this.y -= B.y;
-    this.z -= B.z;
+    this.x = A.x - B.x;
+    this.y = A.y - B.y;
+    this.z = A.z - B.z;
   }
 
   public void makeVector() {
@@ -71,15 +71,17 @@ public class Vector {
   }
 
   public static Vector sum(Vector A, Vector B, String name) {
-    A.sum(A, B);
+    Vector result = new Vector(name);
+    result.sum(A, B);
 
-    return A;
+    return result;
   }
 
   public static Vector sub(Vector A, Vector B, String name) {
-    A.sub(A, B);
+    Vector result = new Vector(name);
+    result.sub(A, B);
 
-    return A;
+    return result;
   }
 
   public double countLength() {

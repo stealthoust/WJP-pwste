@@ -55,11 +55,10 @@ public class Point {
     }
 
     public static void main(String[] args) throws Exception {
-        // Point A = new Point("A");
-        // Point B = new Point("B");
+        Point A = new Point("A");
+        Point B = new Point("B");
 
-        // Vector Va = new Vector(A, B, "Va");
-        Vector Va = new Vector(1, 2, 1, "Va");
+        Vector Va = new Vector(A, B, "Va");
         Vector Vb = new Vector(1, 1, 3, "Vb");
 
         Va.show();
