@@ -8,18 +8,20 @@ import java.awt.event.ActionListener;
 import java.awt.Button;
 
 public class Window extends Frame implements WindowListener, ActionListener {
-
+    
+Button rainbowButton = new Button("Hello world!");
+    
     public Window() throws HeadlessException {
         super();
         setBounds(1250, 250, 500, 250);
         setVisible(true);
         this.addWindowListener(this);
 
-        Button rainbowButton = new Button("Hello world!");
+        
         rainbowButton.setBounds(100, 50, 200, 25);
         rainbowButton.setVisible(true);
         add(rainbowButton);
-
+       rainbowButton.addActionListener(this);
         this.setLayout(null);
     }
 
@@ -54,7 +56,8 @@ public class Window extends Frame implements WindowListener, ActionListener {
 
     @Override
     public void actionPerformed(ActionEvent e) {
-        System.exit(0);
+        rainbowButton.setLocation(getX()+5,getY()+5);
+        //System.exit(0);
         setTitle("Przycisk wciśnięty");
     }
 
